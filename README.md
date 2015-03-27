@@ -1,2 +1,2 @@
 # gldalplot
-a simple widget to display raster surface with matplotlib
+Simple widget to display raster images
