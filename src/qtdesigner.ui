@@ -1,0 +1,94 @@
+# -*- coding: utf-8 -*-
+
+# Form implementation generated from reading ui file '/Users/sasha/Desktop/gdal_plot/qtdesigner.ui'
+#
+# Created: Thu Feb 25 14:10:40 2010
+#      by: PyQt4 UI code generator 4.7
+#
+# WARNING! All changes made in this file will be lost!
+
+from PyQt4 import QtCore, QtGui
+
+class Ui_MplMainWindow(object):
+    def setupUi(self, MplMainWindow):
+        MplMainWindow.setObjectName("MplMainWindow")
+        MplMainWindow.resize(800, 600)
+        self.mplcentralwidget = QtGui.QWidget(MplMainWindow)
+        self.mplcentralwidget.setObjectName("mplcentralwidget")
+        self.verticalLayout_3 = QtGui.QVBoxLayout(self.mplcentralwidget)
+        self.verticalLayout_3.setObjectName("verticalLayout_3")
+        self.groupBox = QtGui.QGroupBox(self.mplcentralwidget)
+        self.groupBox.setObjectName("groupBox")
+        self.verticalLayout = QtGui.QVBoxLayout(self.groupBox)
+        self.verticalLayout.setObjectName("verticalLayout")
+        self.gridLayout = QtGui.QGridLayout()
+        self.gridLayout.setObjectName("gridLayout")
+        self.label = QtGui.QLabel(self.groupBox)
+        self.label.setObjectName("label")
+        self.gridLayout.addWidget(self.label, 0, 0, 1, 1)
+        self.mpleast1 = QtGui.QLineEdit(self.groupBox)
+        self.mpleast1.setObjectName("mpleast1")
+        self.gridLayout.addWidget(self.mpleast1, 0, 1, 1, 1)
+        self.verticalLayout.addLayout(self.gridLayout)
+        self.mplhorizontalLayout = QtGui.QHBoxLayout()
+        self.mplhorizontalLayout.setObjectName("mplhorizontalLayout")
+        self.label_3 = QtGui.QLabel(self.groupBox)
+        self.label_3.setObjectName("label_3")
+        self.mplhorizontalLayout.addWidget(self.label_3)
+        self.mpllineEdit = QtGui.QLineEdit(self.groupBox)
+        self.mpllineEdit.setObjectName("mpllineEdit")
+        self.mplhorizontalLayout.addWidget(self.mpllineEdit)
+        self.mplpushButton = QtGui.QPushButton(self.groupBox)
+        self.mplpushButton.setObjectName("mplpushButton")
+        self.mplhorizontalLayout.addWidget(self.mplpushButton)
+        self.verticalLayout.addLayout(self.mplhorizontalLayout)
+        self.verticalLayout_3.addWidget(self.groupBox)
+        self.groupBox_2 = QtGui.QGroupBox(self.mplcentralwidget)
+        self.groupBox_2.setObjectName("groupBox_2")
+        self.verticalLayout_2 = QtGui.QVBoxLayout(self.groupBox_2)
+        self.verticalLayout_2.setObjectName("verticalLayout_2")
+        self.mpl_2 = MplWidget(self.groupBox_2)
+        sizePolicy = QtGui.QSizePolicy(QtGui.QSizePolicy.Expanding, QtGui.QSizePolicy.Expanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.mpl_2.sizePolicy().hasHeightForWidth())
+        self.mpl_2.setSizePolicy(sizePolicy)
+        self.mpl_2.setObjectName("mpl_2")
+        self.verticalLayout_2.addWidget(self.mpl_2)
+        self.verticalLayout_3.addWidget(self.groupBox_2)
+        MplMainWindow.setCentralWidget(self.mplcentralwidget)
+        self.mplmenubar = QtGui.QMenuBar(MplMainWindow)
+        self.mplmenubar.setGeometry(QtCore.QRect(0, 0, 800, 22))
+        self.mplmenubar.setObjectName("mplmenubar")
+        self.mplmenuFile = QtGui.QMenu(self.mplmenubar)
+        self.mplmenuFile.setObjectName("mplmenuFile")
+        MplMainWindow.setMenuBar(self.mplmenubar)
+        self.statusbar = QtGui.QStatusBar(MplMainWindow)
+        self.statusbar.setObjectName("statusbar")
+        MplMainWindow.setStatusBar(self.statusbar)
+        self.mplactionOpen = QtGui.QAction(MplMainWindow)
+        self.mplactionOpen.setObjectName("mplactionOpen")
+        self.actionQuit = QtGui.QAction(MplMainWindow)
+        self.actionQuit.setObjectName("actionQuit")
+        self.mplactionQuit = QtGui.QAction(MplMainWindow)
+        self.mplactionQuit.setObjectName("mplactionQuit")
+        self.mplmenuFile.addSeparator()
+        self.mplmenuFile.addAction(self.mplactionOpen)
+        self.mplmenuFile.addSeparator()
+        self.mplmenuFile.addAction(self.mplactionQuit)
+        self.mplmenubar.addAction(self.mplmenuFile.menuAction())
+
+        self.retranslateUi(MplMainWindow)
+        QtCore.QMetaObject.connectSlotsByName(MplMainWindow)
+
+    def retranslateUi(self, MplMainWindow):
+        MplMainWindow.setWindowTitle(QtGui.QApplication.translate("MplMainWindow", "PlotProfile", None, QtGui.QApplication.UnicodeUTF8))
+        self.label.setText(QtGui.QApplication.translate("MplMainWindow", "pick :", None, QtGui.QApplication.UnicodeUTF8))
+        self.label_3.setText(QtGui.QApplication.translate("MplMainWindow", "Datasource", None, QtGui.QApplication.UnicodeUTF8))
+        self.mplpushButton.setText(QtGui.QApplication.translate("MplMainWindow", "Display", None, QtGui.QApplication.UnicodeUTF8))
+        self.mplmenuFile.setTitle(QtGui.QApplication.translate("MplMainWindow", "File", None, QtGui.QApplication.UnicodeUTF8))
+        self.mplactionOpen.setText(QtGui.QApplication.translate("MplMainWindow", "Open", None, QtGui.QApplication.UnicodeUTF8))
+        self.actionQuit.setText(QtGui.QApplication.translate("MplMainWindow", "Quit", None, QtGui.QApplication.UnicodeUTF8))
+        self.mplactionQuit.setText(QtGui.QApplication.translate("MplMainWindow", "Quit", None, QtGui.QApplication.UnicodeUTF8))
+
+from mplwidget import MplWidget
